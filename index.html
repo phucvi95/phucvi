@@ -16,8 +16,54 @@
   <link href="css/mdb.min.css" rel="stylesheet">
 
   <style>
-    body, .navbar, .card, .list-group-item, footer.page-footer {
+    body,
+    .navbar,
+    .card,
+    .list-group-item,
+    footer.page-footer {
       background-color: #e9ebee !important;
+    }
+
+    #categories .list-group-item {
+      border: 0;
+    }
+
+    #categories a {
+      color: #212529;
+    }
+
+    #categories a:hover {
+      color: #007bff;
+    }
+
+    #tags {
+      display: inherit;
+    }
+
+    #saved ul:first-child {
+      padding-left: 0px;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#330867));
+      background-image: -webkit-linear-gradient(bottom, #30cfd0 0%, #330867 100%);
+      background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    }
+
+    .blockquote {
+      border-left: .25rem solid #11d2cb;
     }
   </style>
 
@@ -49,13 +95,13 @@
           </ul>
           <ul class="navbar-nav nav-flex-icons">
             <li class="nav-item">
-              <a class="nav-link" href="fb.me/phucvi95"><i class="fa fa-facebook-f"></i></a>
+              <a class="nav-link" href="https://fb.me/phucvi95"><i class="fa fa-facebook-f"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"><i class="fa fa-twitter"></i></a>
+              <a class="nav-link" href="https://twitter.com/phucvi95"><i class="fa fa-twitter"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"><i class="fa fa-github"></i></a>
+              <a class="nav-link" href="https://github.com/phucvi95/"><i class="fa fa-github"></i></a>
             </li>
           </ul>
         </div>
@@ -65,7 +111,7 @@
   </header>
   <!--Main Navigation-->
 
-  <div class="card card-intro blue-gradient">
+  <div class="card card-intro blue-gradient" id="banner">
 
     <div class="card-body white-text rgba-black-light text-center">
 
@@ -73,12 +119,7 @@
       <div class="row d-flex justify-content-center">
 
         <!--Grid column-->
-        <div class="col-md-6 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-
-          <h1 class="font-weight-bold mb-3 h2">Material Design for Bootstrap</h1>
-
-          <h4 class="mb-2 h5">The world's most popular framework for building responsive, mobile-first websites and apps
-          </h4>
+        <div class="col-md-6 wow fadeIn" style="visibility: visible; animation-name: fadeIn; min-height: 7em;">
 
         </div>
         <!--Grid column-->
@@ -96,346 +137,246 @@
   <!--Main Layout-->
   <main class="mt-5">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-9">
-          <!--Section: Blog v.3-->
-          <section class="section extra-margins pb-3 text-center text-lg-left wow fadeIn" data-wow-delay="0.5s">
-            <!--Grid row-->
+      <div class="row pb-5">
+        <div class="col-md-9" id="content">
+          <div class="container">
 
-            <div class="row border-right border-bottom mr-3 mb-5">
-              <!--Grid column-->
-              <div class="col-lg-4 mb-4">
-                <!--Featured image-->
-                <div class="view overlay z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg" class="img-fluid"
-                    alt="First sample image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
+            <!--Section: Blog v.4-->
+            <section class="section wow fadeIn">
+
+              <!--Grid row-->
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- Card -->
+                  <div class="row pull-right">
+                    <span id="rateMe ">
+                      <i class="fa fa-star py-2 px-1 rate-popover" data-index="0" data-html="true" data-toggle="popover"
+                        data-placement="top" title="Very bad"></i>
+                      <i class="fa fa-star py-2 px-1 rate-popover" data-index="1" data-html="true" data-toggle="popover"
+                        data-placement="top" title="Poor"></i>
+                      <i class="fa fa-star py-2 px-1 rate-popover" data-index="2" data-html="true" data-toggle="popover"
+                        data-placement="top" title="OK"></i>
+                      <i class="fa fa-star py-2 px-1 rate-popover" data-index="3" data-html="true" data-toggle="popover"
+                        data-placement="top" title="Good"></i>
+                      <i class="fa fa-star py-2 px-1 rate-popover" data-index="4" data-html="true" data-toggle="popover"
+                        data-placement="top" title="Excellent"></i>
+                    </span>
+                  </div>
+                  <h2><a><strong>This is title of the news At vero eos et accusamus et iusto odio dignissimos
+                      </strong></a></h2>
+
+                  <div class="pull-right">
+                    <span>
+                      <i class="fa fa-calendar pl-2" aria-hidden="true"></i>
+                      <span> May 27th, 2019</span>
+                    </span>
+                    <span>
+                      <span>
+
+                      </span>
+                        <a onclick="fullPage()"><i class="fa fa-arrows-alt teal-text pl-3"   aria-hidden="true"></i> Full page</a> 
+                      </span>
+
+                  </div>
+
+
+                  <!--Excerpt-->
+                  <div class="excerpt mt-5 wow fadeIn" data-wow-delay="0.3s">
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                      deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
+                      non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum
+                      et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                    </p>
+
+                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+                      maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
+                      autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates
+                      repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
+                      ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus.</p>
+
+                    <blockquote class="blockquote mt-4 mb-4">
+                      <p class="mb-0"><em>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+                          saepe
+                          eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic
+                          tenetur a sapiente delectus.</em></p>
+                      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                      </footer>
+                    </blockquote>
+
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                      vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                      aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+                    </p>
+
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                      sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                      voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                      laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
+                      qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+
+
+                    <div class="mt-4 d-flex justify-content-end">
+                      <a href="#!" class="badge pink">#Travel</a>
+                      <a href="#!" class="badge badge-primary mx-1">#Adventure</a>
+                      <a href="#!" class="badge grey mr-1">#Photography</a>
+                      <a href="#!" class="badge badge-info">#Education</a>
+                    </div>
+
+                  </div>
+
+
+                  <section id="social-icons" class="mt-5">
+
+                    <!--Title-->
+                    <h2 class="section-heading">
+                      Share this with your friends
+                    </h2>
+                    <!--Facebook-->
+                    <button type="button" data-toggle="tooltip" data-placement="top" title="Share with Facebook"
+                      class="btn btn-fb">
+                      <i class="fa fa-facebook-f pr-1"></i>
+                      <span>Facebook</span>
+                    </button>
+                    <span class="counter">22</span>
+
+                    <!--Twitter-->
+                    <button type="button" data-toggle="tooltip" data-placement="top" title="Share with Twitter"
+                      class="btn btn-tw">
+                      <i class="fa fa-twitter pr-1"></i>
+                      <span>Twitter</span>
+                    </button>
+
+                    <!--Google +-->
+                    <button type="button" data-toggle="tooltip" data-placement="top" title="Share with Google+"
+                      class="btn btn-gplus">
+                      <i class="fa fa-google-plus pr-1" aria-hidden="true"></i>
+                      <span>Google+</span>
+                    </button>
+
+                    <!--Linkedin-->
+                    <button type="button" data-toggle="tooltip" data-placement="top" title="Share with Linkedin"
+                      class="btn btn-li">
+                      <i class="fa fa-linkedin pr-1"></i>
+                      <span>Linkedin</span>
+                    </button>
+                    <!--Section: Code-->
+
+                  </section>
                 </div>
               </div>
-              <!--Grid column-->
+              <!--Grid row-->
 
-              <!--Grid column-->
-              <div class="col-lg-7 mb-4">
-                <!--Excerpt-->
-                <a href="" class="teal-text">
-                  <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
-                </a>
-                <h4 class="mb-1"><strong><a href="">This is title of the news</a></strong></h4>
+            </section>
+            <!--Section: Blog v.4-->
 
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo</p>
+            <hr class="mb-5 mt-4">
 
 
-                <!-- button share -->
-                <span class="pr-3">share this: </span>
-                <a class="fb-ic mr-3" href="fb.me/phucvi95" role="button"><i class="fa fa-facebook"></i></a>
+            <!--Author box-->
 
-                <a class="tw-ic mr-3" role="button"><i class="fa fa-twitter"></i></a>
+            <section class="my-5">
 
-                <a class="gplus-ic mr-3" role="button"><i class="fa fa-google-plus"></i></a>
-
-                <a class="ins-ic mr-3" role="button"><i class="fa fa-github"></i></a>
-
-                <!-- button share -->
-                <i class="fa fa-tags" aria-hidden="true"></i>
+              <!-- Card header -->
+              <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
+                <p class="mr-4 mb-0">About the author</p>
+                <ul class="list-unstyled list-inline mb-0">
+                  <li class="list-inline-item"><a href="" class="mr-3"><i class="fa fa-envelope mr-1"></i>Send
+                      message</a></li>
+                  <li class="list-inline-item"><a href="" class="mr-3"><i class="fa fa-user mr-1"></i>See profile</a>
+                  </li>
+                  <li class="list-inline-item"><a href="" class="mr-3"><i class="fa fa-feed mr-1"></i>Follow</a></li>
+                </ul>
               </div>
 
-              <!--Grid column-->
-            </div>
-
-            <div class="row border-right border-bottom mr-3 mb-5">
-              <!--Grid column-->
-              <div class="col-lg-4 mb-4">
-                <!--Featured image-->
-                <div class="view overlay z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg" class="img-fluid"
-                    alt="First sample image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
+              <div class="media mt-4 px-1 text-md-left">
+                <img class="card-img-100 d-flex z-depth-1 mr-3"
+                  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="font-weight-bold mt-0">
+                    <a href="">Danny Newman</a>
+                  </h5>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consectetur accusamus velit nostrum et
+                  magnam.
                 </div>
               </div>
-              <!--Grid column-->
 
-              <!--Grid column-->
-              <div class="col-lg-7 mb-4">
-                <!--Excerpt-->
-                <a href="" class="teal-text">
-                  <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
-                </a>
-                <h4 class="mb-1"><strong><a href="">This is title of the news</a></strong></h4>
+            </section>
 
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo</p>
+            <!--/.Author box-->
 
 
-                <!-- button share -->
-                <span class="pr-3">share this: </span>
-                <a class="fb-ic mr-3" role="button"><i class="fa fa-facebook"></i></a>
 
-                <a class="tw-ic mr-3" role="button"><i class="fa fa-twitter"></i></a>
+            <!--Section: Comments list-->
+            <section class="my-5">
 
-                <a class="gplus-ic mr-3" role="button"><i class="fa fa-google-plus"></i></a>
+              <!-- Card header -->
+              <div class="card-header border-0 font-weight-bold">4 comments</div>
 
-                <a class="ins-ic mr-3" role="button"><i class="fa fa-instagram"></i></a>
-
-                <!-- button share -->
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              </div>
-
-              <!--Grid column-->
-            </div>
-            <hr class="mb-5">
-
-            <div class="row border-right border-bottom mr-3 mb-5">
-              <!--Grid column-->
-              <div class="col-lg-4 mb-4">
-                <!--Featured image-->
-                <div class="view overlay z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg" class="img-fluid"
-                    alt="First sample image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
+              <div class="media d-block d-md-flex mt-4">
+                <img class="card-img-64 d-flex mx-auto mb-3"
+                  src="https://mdbootstrap.com/img/Photos/Avatars/img (20).jpg" alt="Generic placeholder image">
+                <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                  <h5 class="font-weight-bold mt-0">
+                    <a href="">Miley Steward</a>
+                    <a href="" class="pull-right">
+                      <i class="fa fa-reply"></i>
+                    </a>
+                  </h5>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <div class="media d-block d-md-flex mt-4">
+                    <img class="card-img-64 d-flex mx-auto mb-3"
+                      src="https://mdbootstrap.com/img/Photos/Avatars/img (27).jpg" alt="Generic placeholder image">
+                    <div class="media-body text-center text-md-left ml-md-3 ml-0">
+                      <h5 class="font-weight-bold mt-0">
+                        <a href="">Tommy Smith</a>
+                        <a href="" class="pull-right">
+                          <i class="fa fa-reply"></i>
+                        </a>
+                      </h5>
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                      totam rem aperiam, eaque
+                      ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </div>
+                  </div>
                 </div>
               </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-7 mb-4">
-                <!--Excerpt-->
-                <a href="" class="teal-text">
-                  <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
-                </a>
-                <h4 class="mb-1"><strong><a href="">This is title of the news</a></strong></h4>
-
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo</p>
 
 
-                <!-- button share -->
-                <span class="pr-3">share this: </span>
-                <a class="fb-ic mr-3" role="button"><i class="fa fa-facebook"></i></a>
+              <!-- Quick Reply -->
 
-                <a class="tw-ic mr-3" role="button"><i class="fa fa-twitter"></i></a>
+              <section class="my-5">
 
-                <a class="gplus-ic mr-3" role="button"><i class="fa fa-google-plus"></i></a>
+                <div class="card-header border-0 font-weight-bold">Leave a reply (logged in user)</div>
 
-                <a class="ins-ic mr-3" role="button"><i class="fa fa-instagram"></i></a>
-
-                <!-- button share -->
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              </div>
-
-              <!--Grid column-->
-            </div>
-            <hr class="mb-5">
-
-            <div class="row border-right border-bottom mr-3 mb-5">
-              <!--Grid column-->
-              <div class="col-lg-4 mb-4">
-                <!--Featured image-->
-                <div class="view overlay z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg" class="img-fluid"
-                    alt="First sample image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
+                <div class="d-md-flex flex-md-fill px-1">
+                  <div class="d-flex justify-content-center mr-md-5 mt-md-5 mt-4">
+                    <img class="card-img-100 z-depth-1 rounded-circle"
+                      src="https://mdbootstrap.com/img/Photos/Avatars/img (32).jpg" alt="avatar">
+                  </div>
+                  <div class="md-form w-100">
+                    <textarea class="form-control md-textarea pt-0" id="exampleFormControlTextarea1" rows="5"
+                      placeholder="Write something here..."></textarea>
+                  </div>
                 </div>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-7 mb-4">
-                <!--Excerpt-->
-                <a href="" class="teal-text">
-                  <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
-                </a>
-                <h4 class="mb-1"><strong><a href="">This is title of the news</a></strong></h4>
-
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo</p>
-
-
-                <!-- button share -->
-                <span class="pr-3">share this: </span>
-                <a class="fb-ic mr-3" role="button"><i class="fa fa-facebook"></i></a>
-
-                <a class="tw-ic mr-3" role="button"><i class="fa fa-twitter"></i></a>
-
-                <a class="gplus-ic mr-3" role="button"><i class="fa fa-google-plus"></i></a>
-
-                <a class="ins-ic mr-3" role="button"><i class="fa fa-instagram"></i></a>
-
-                <!-- button share -->
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              </div>
-
-              <!--Grid column-->
-            </div>
-            <hr class="mb-5">
-
-            <div class="row border-right border-bottom mr-3 mb-5">
-              <!--Grid column-->
-              <div class="col-lg-4 mb-4">
-                <!--Featured image-->
-                <div class="view overlay z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg" class="img-fluid"
-                    alt="First sample image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
+                <div class="pull-right">
+                  <button class="btn aqua-gradient">Post</button>
                 </div>
-              </div>
-              <!--Grid column-->
 
-              <!--Grid column-->
-              <div class="col-lg-7 mb-4">
-                <!--Excerpt-->
-                <a href="" class="teal-text">
-                  <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
-                </a>
-                <h4 class="mb-1"><strong><a href="">This is title of the news</a></strong></h4>
+              </section>
 
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo</p>
+            </section>
+
+            <!--/Section: Comments list-->
 
 
-                <!-- button share -->
-                <span class="pr-3">share this: </span>
-                <a class="fb-ic mr-3" role="button"><i class="fa fa-facebook"></i></a>
 
-                <a class="tw-ic mr-3" role="button"><i class="fa fa-twitter"></i></a>
-
-                <a class="gplus-ic mr-3" role="button"><i class="fa fa-google-plus"></i></a>
-
-                <a class="ins-ic mr-3" role="button"><i class="fa fa-instagram"></i></a>
-
-                <!-- button share -->
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              </div>
-
-              <!--Grid column-->
-            </div>
-            <hr class="mb-5">
-
-            <div class="row border-right border-bottom mr-3 mb-5">
-              <!--Grid column-->
-              <div class="col-lg-4 mb-4">
-                <!--Featured image-->
-                <div class="view overlay z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg" class="img-fluid"
-                    alt="First sample image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-7 mb-4">
-                <!--Excerpt-->
-                <a href="" class="teal-text">
-                  <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
-                </a>
-                <h4 class="mb-1"><strong><a href="">This is title of the news</a></strong></h4>
-
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo</p>
-
-
-                <!-- button share -->
-                <span class="pr-3">share this: </span>
-                <a class="fb-ic mr-3" role="button"><i class="fa fa-facebook"></i></a>
-
-                <a class="tw-ic mr-3" role="button"><i class="fa fa-twitter"></i></a>
-
-                <a class="gplus-ic mr-3" role="button"><i class="fa fa-google-plus"></i></a>
-
-                <a class="ins-ic mr-3" role="button"><i class="fa fa-instagram"></i></a>
-
-                <!-- button share -->
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              </div>
-
-              <!--Grid column-->
-            </div>
-            <hr class="mb-5">
-
-            <div class="row border-right border-bottom mr-3 mb-5">
-              <!--Grid column-->
-              <div class="col-lg-4 mb-4">
-                <!--Featured image-->
-                <div class="view overlay z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg" class="img-fluid"
-                    alt="First sample image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-7 mb-4">
-                <!--Excerpt-->
-                <a href="" class="teal-text">
-                  <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
-                </a>
-                <h4 class="mb-1"><strong><a href="">This is title of the news</a></strong></h4>
-
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo</p>
-
-
-                <!-- button share -->
-                <span class="pr-3">share this: </span>
-                <a class="fb-ic mr-3" role="button"><i class="fa fa-facebook"></i></a>
-
-                <a class="tw-ic mr-3" role="button"><i class="fa fa-twitter"></i></a>
-
-                <a class="gplus-ic mr-3" role="button"><i class="fa fa-google-plus"></i></a>
-
-                <a class="ins-ic mr-3" role="button"><i class="fa fa-instagram"></i></a>
-
-                <!-- button share -->
-                <i class="fa fa-tags" aria-hidden="true"></i>
-              </div>
-
-              <!--Grid column-->
-            </div>
-            <hr class="mb-5">
-            <!--Grid row-->
-
-            <!--Pagination dark-->
-            <nav class="wow fadeIn mb-4 mt-5" data-wow-delay="0.4s"
-              style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-              <ul class="pagination pg-blue flex-center">
-                <!--Arrow left-->
-                <li class="page-item">
-                  <a class="page-link waves-effect waves-effect" aria-label="Previous">
-                    <span>Previous</span>
-                  </a>
-                </li>
-
-                <!--Numbers-->
-                <li class="page-item active"><a class="page-link waves-effect waves-effect">1</a></li>
-                <li class="page-item"><a class="page-link waves-effect waves-effect">2</a></li>
-                <li class="page-item"><a class="page-link waves-effect waves-effect">3</a></li>
-                <li class="page-item"><a class="page-link waves-effect waves-effect">4</a></li>
-                <li class="page-item"><a class="page-link waves-effect waves-effect">5</a></li>
-
-                <!--Arrow right-->
-                <li class="page-item">
-                  <a class="page-link waves-effect waves-effect" aria-label="Next">
-                    <span>Next</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <!--/Pagination dark-->
-
-
-          </section>
-          <!--Section: Blog v.3-->
+          </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" id="left-menu">
           <div class="card card-cascade">
 
             <!-- Card image -->
@@ -455,127 +396,207 @@
               <h6 class="font-weight-bold indigo-text py-2">Web developer</h6>
               <!-- Facebook -->
               <a type="button" href="https://www.fb.me/phucvi95"
-                class="btn-floating btn-small btn-fb waves-effect waves-light"><i class="fa fa-facebook-f"></i></a>
+                class="btn blue-gradient btn-floating btn-small btn-fb waves-effect waves-light"><i
+                  class="fa fa-facebook-f"></i></a>
               <!-- Twitter -->
-              <a type="button" class="btn-floating btn-small btn-tw waves-effect waves-light"><i
+              <a type="button" href="https://twitter.com/phucvi95"
+                class="btn aqua-gradient btn-floating btn-small btn-tw waves-effect waves-light"><i
                   class="fa fa-twitter"></i></a>
               <!-- Google + -->
-              <a type="button" href="https://github.com/phucvi95" class="btn-floating btn-small btn-default waves-effect waves-light"><i
+              <a type="button" href="https://github.com/phucvi95"
+                class="btn purple-gradient btn-floating btn-small btn-light waves-effect waves-light"><i
                   class="fa fa-github"></i></a>
 
             </div>
 
           </div>
 
-         
 
-          <div class="treeview border-top border-left border-right mt-3">
-            <h6 class="pt-3 pl-3">Categories</h6>
-            <hr>
-            <ul class="list-group list-group-flush border-right border-left border-bottom">
-              <li class="list-group-item"><a href="#">Cras justo odio</a></li>
-              <li class="list-group-item"><a href="#">Dapibus ac facilisis in</a></li>
-              <li class="list-group-item"><a href="#">Morbi leo risus</a></li>
-              <li class="list-group-item"><a href="#">Porta ac consectetur ac</a></li>
-              <li class="list-group-item"><a href="#">Vestibulum at eros</a></li>
+          <div class="mt-3">
+            <!-- Card -->
+            <div class="card card-cascade">
+
+              <!-- Card image -->
+              <div class="view view-cascade gradient-card-header blue-gradient">
+                <!-- Subtitle -->
+                <p class="card-header-subtitle mb-0">Deserve for her own card</p>
+              </div>
+
+              <!-- Card content -->
+              <div class="card-body card-body-cascade text-center">
+
+                <ul class="list-unstyled">
+                  <li class="media mt-3">
+                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg"
+                      alt="Generic placeholder image">
+                    <div class="media-body text-left">
+                      Cras sit amet nibh libero came
+                    </div>
+                  </li>
+                  <li class="media mt-3">
+                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg"
+                      alt="Generic placeholder image">
+                    <div class="media-body text-left">
+                      Cras sit amet nibh libero
+                    </div>
+                  </li>
+                  <li class="media mt-3">
+                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg"
+                      alt="Generic placeholder image">
+                    <div class="media-body text-left">
+                      Cras sit amet nibh libero camet
+                    </div>
+                  </li>
+                  <li class="media mt-3">
+                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg"
+                      alt="Generic placeholder image">
+                    <div class="media-body text-left">
+                      Cras sit amet nibh libero
+                    </div>
+                  </li>
+                  <li class="media mt-3">
+                    <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg"
+                      alt="Generic placeholder image">
+                    <div class="media-body text-left">
+                      Cras sit amet nibh libero
+                    </div>
+                  </li>
+                </ul>
+
+                <hr>
+                <div class="pull-right">
+                  <button class="btn btn-rounded blue-gradient btn-sm">see more</button>
+                </div>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+          </div>
+
+          <div class="card mt-3" id="categories">
+            <div class="card-body">
+              <h5 class="font-weight-bold mb-1">Categories</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="#!">Cras justo odio</a></li>
+              <li class="list-group-item"><a href="#!">Dapibus ac facilisis in</a></li>
+              <li class="list-group-item"><a href="#!">Vestibulum at eros</a></li>
+              <li class="list-group-item"><a href="#!">Vestibulum at eros</a></li>
+              <li class="list-group-item"><a href="#!">Vestibulum at eros</a></li>
+              <li class="list-group-item"><a href="#!">Vestibulum at eros</a></li>
             </ul>
           </div>
 
-          <div class="treeview border mt-3">
-            <h6 class="pt-3 pl-3">Saved</h6>
-            <hr>
-            <ul class="mb-1 pl-3 pb-2">
-
-              <li><i class="fa fa-angle-right rotate"></i>
-                <span><i class="fa fa-folder-open ic-w mx-1"></i>2019</span>
-                <ul class="nested">
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>January(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>February(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>March(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>April(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>May(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>June(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>July(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>August(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>September(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>October(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>November(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>December(0)</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li><i class="fa fa-angle-right rotate"></i>
-                <span><i class="fa fa-folder-open ic-w mx-1"></i>2018</span>
-                <ul class="nested">
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>January(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>February(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>March(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>April(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>May(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>June(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>July(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>August(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>September(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>October(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>November(0)</a>
-                  </li>
-                  <li>
-                    <a><i class="fa fa-folder-open ic-w mr-1"></i>December(0)</a>
-                  </li>
-                </ul>
-              </li>
-
-
-
-
-            </ul>
+          <div class="card mt-3" id="tags">
+            <div class="card-body">
+              <h5 class="font-weight-bold mb-1">Tags</h5>
+            </div>
+            <div class="px-3 pb-5">
+              <a href="#" class="badge badge-default">#Default(5)</a>
+              <a href="#" class="badge badge-primary">#Primary(5)</a>
+              <a href="#" class="badge badge-secondary">#Secondary(5)</a>
+              <a href="#" class="badge badge-success">#Success(5)</a>
+              <a href="#" class="badge badge-danger">#Danger(5)</a>
+              <a href="#" class="badge badge-warning">#Warning(5)</a>
+              <a href="#" class="badge badge-info">#Info(5)</a>
+              <a href="#" class="badge badge-light">#Light(5)</a>
+              <a href="#" class="badge badge-dark">#Dark(5)</a>
+            </div>
           </div>
 
+          <div class="card mt-3" id="saved">
+            <div class="card-body">
+              <h5 class="font-weight-bold mb-3">Saved</h5>
+              <div class="treeview">
+                <ul>
+                  <li><i class="fa fa-angle-right rotate"></i>
+                    <span><i class="fa fa-folder-open ic-w mx-1"></i>2019</span>
+                    <ul class="nested">
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>January(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>February(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>March(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>April(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>May(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>June(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>July(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>August(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>September(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>October(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>November(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>December(0)</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><i class="fa fa-angle-right rotate"></i>
+                    <span><i class="fa fa-folder-open ic-w mx-1"></i>2018</span>
+                    <ul class="nested">
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>January(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>February(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>March(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>April(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>May(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>June(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>July(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>August(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>September(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>October(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>November(0)</a>
+                      </li>
+                      <li>
+                        <a><i class="fa fa-folder-open ic-w mr-1"></i>December(0)</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -588,7 +609,7 @@
 
   <!-- Footer -->
   <!-- Footer -->
-  <footer class="page-footer font-small blue-gradient">
+  <footer class="page-footer font-small blue-gradient" id="footer-botom">
 
     <!-- Footer Elements -->
     <div class="container">
@@ -596,9 +617,8 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">Copyright © 2019 Phúc Vi. All rights reserved.
-      <a href="https://mdbootstrap.com/education/bootstrap/"> Designed and built with all the love in the world by the
-        @phucvi</a>
+    <div class="footer-copyright text-center text-white py-3">
+      Designed and built with all the love in the world by the @phucvi
     </div>
     <!-- Copyright -->
 
@@ -616,9 +636,34 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- rating.js file -->
+  <script src="js/addons/rating.js"></script>
   <script>
     new WOW().init();
   </script>
 </body>
+<script>
+  // Tooltips Initialization
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  function fullPage() {
+    var flag = $("#content")[0].style.cssText;
+    if (!flag) {
+      $("#left-menu")[0].style.cssText = "display: none;";
+      $("#content")[0].style.cssText = "flex: 0 0 100%; max-width: 100%;";
+      $("header")[0].style.cssText = "display: none;";
+      $("#footer-botom")[0].style.cssText = "display: none;";
+      $("#banner")[0].style.cssText = "display: none;";
+    } else {
+      $("#left-menu")[0].style.cssText = "";
+      $("#content")[0].style.cssText = "";
+      $("header")[0].style.cssText = "";
+      $("#footer-botom")[0].style.cssText = "";
+      $("#banner")[0].style.cssText = "";
+    }
+  };
+</script>
 
 </html>
